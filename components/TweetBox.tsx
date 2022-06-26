@@ -91,15 +91,15 @@ const TweetBox = ({ setTweets }: Props) => {
             className="h-24 w-full text-xl outline-none placeholder:text-xl"
           />
           <div className="flex items-center">
-            <div className="flex flex-1 space-x-2 text-twitter">
+            <div className="flex flex-1 text-twitter">
               <PhotographIcon
                 onClick={() => setImageUrlBoxIsOpen(!imageUrlBoxIsOpen)}
-                className="h-5 w-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-150"
+                className="h-8 w-8 cursor-pointer transition-transform duration-150 ease-out p-1 hover:bg-twitter/10 hover:rounded-full"
               />
-              <SearchCircleIcon className="h-5 w-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-150" />
-              <EmojiHappyIcon className="h-5 w-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-150" />
-              <CalendarIcon className="h-5 w-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-150" />
-              <LocationMarkerIcon className="h-5 w-5 cursor-pointer transition-transform duration-150 ease-out hover:scale-150" />
+              <SearchCircleIcon className="h-8 w-8 p-1 opacity-40" />
+              <EmojiHappyIcon className="h-8 w-8 p-1 opacity-40" />
+              <CalendarIcon className="h-8 w-8 p-1 opacity-40" />
+              <LocationMarkerIcon className="h-8 w-8 p-1 opacity-40" />
             </div>
 
             <button
