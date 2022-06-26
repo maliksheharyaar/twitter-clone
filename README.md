@@ -2,4 +2,4 @@
 
 ## Vercel Deployment: https://twitter-clone-psi-eight.vercel.app/
 
-### This application was made to get myself familiar with the above mentioned technologies.
+This application was made to get myself familiar with the above mentioned technologies.
