@@ -76,43 +76,43 @@ const TweetBox = ({ setTweets }: Props) => {
   return (
     <div className="flex space-x-2 p-5">
       <img
-        className="h-14 w-14 object-cover rounded-full mt-4"
+        className="h-7 w-7 md:h-10 md:w-10 object-cover rounded-full mt-4"
         src={session?.user?.image || "https://links.papareact.com/gll"}
         alt="profile image"
       />
 
-      <div className="flex flex-1 items-center pl-2">
-        <form className="flex flex-1 flex-col" action="">
-          <input
+      <div className="flex flex-1 items-center pl-1">
+        <form className="flex flex-1 flex-col" >
+          <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            type="text"
             placeholder="What's Happening?"
-            className="h-24 w-full text-xl outline-none placeholder:text-xl"
-          />
+            className=" mt-5 resize-none h-20 w-full placeholder:text-base outline-none "
+          >
+          </textarea>
           <div className="flex items-center">
             <div className="flex flex-1 text-twitter">
               <PhotographIcon
                 onClick={() => setImageUrlBoxIsOpen(!imageUrlBoxIsOpen)}
-                className="h-8 w-8 cursor-pointer transition-transform duration-150 ease-out p-1 hover:bg-twitter/10 hover:rounded-full"
+                className="h-7 w-7 cursor-pointer transition-transform duration-150 ease-out p-1 hover:bg-twitter/10 hover:rounded-full"
               />
-              <SearchCircleIcon className="h-8 w-8 p-1 opacity-40" />
-              <EmojiHappyIcon className="h-8 w-8 p-1 opacity-40" />
-              <CalendarIcon className="h-8 w-8 p-1 opacity-40" />
-              <LocationMarkerIcon className="h-8 w-8 p-1 opacity-40" />
+              <SearchCircleIcon className="h-7 w-7 p-1 opacity-40" />
+              <EmojiHappyIcon className="h-7 w-7 p-1 opacity-40" />
+              <CalendarIcon className="h-7 w-7 p-1 opacity-40" />
+              <LocationMarkerIcon className="h-7 w-7 p-1 opacity-40" />
             </div>
 
             <button
               onClick={handleSubmit}
               disabled={!input || !session}
-              className="disabled:opacity-40 bg-twitter px-5 py-2 font-bold text-white rounded-full"
+              className="disabled:opacity-40 bg-twitter px-4 py-2 font-bold text-xs md:text-base text-white rounded-full"
             >
               Tweet
             </button>
           </div>
 
           {imageUrlBoxIsOpen && (
-            <form className="mt-5 flex rounded-lg bg-twitter/80 py-2 px-4">
+            <form className="mt-5 flex rounded-lg bg-twitter/80 py-2 px-1">
               <input
                 ref={imageInputRef}
                 className="text-xs sm:text-base flex-1 bg-transparent p-2 text-white outline-none placeholder:text-white"
@@ -122,7 +122,7 @@ const TweetBox = ({ setTweets }: Props) => {
               <button
                 type="submit"
                 onClick={addImageToTweet}
-                className="font-bold text-white text-xs sm:text-base"
+                className="font-bold text-white text-xs sm:text-base border-2 rounded-xl shadow-md p-1"
               >
                 Add Image
               </button>
